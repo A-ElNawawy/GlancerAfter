@@ -1,0 +1,247 @@
+
+/* start Rules */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Pacifico|Chewy');
+:root{
+    --xxs:calc(320px/12);
+    --xs:calc(480px/12);
+    --s:calc(768px/12);
+    --m:calc(992px/12);
+    --l:calc(1200px/12);
+}
+*{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+body > *{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container{
+    margin:auto;
+}
+.sub-container{   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.separator{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* end Rules */
+
+/* Start header*/
+header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header .container .sub-container{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container .sub-container nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 5px;
+}
+header .container .sub-container nav ul li{
+    padding-left:10px;
+    padding-right:10px;
+}
+header .container .sub-container nav ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight:900;
+}
+header .container .sub-container main h3{
+    font-size: 35px;
+    color:#A6C1ED;
+    font-weight:bolder;
+    font-family:'Playfair Display';
+}
+header .container .sub-container .search {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 326px;
+}
+header .container .sub-container .search input{
+    border:1px solid #CCCCCC;
+    border-radius: 13px;
+    height: 26px;
+    width: 165px;
+    padding-left:8px;
+}
+header .container .sub-container .search button{
+    border:hidden;
+    background: transparent;
+}
+header .container .sub-container .search button:nth-of-type(2){
+    background-color: #A6C1ED;
+    border-radius: 15px;
+    height: 28px;
+    width: 91px;
+}
+/* End header*/
+
+/*Start Picture*/
+.picture{
+    box-shadow: 0 -8px 22px #C9C9C9 inset;
+    background-color:burlywood;
+    color: #222;
+    background-image: url('https://cdn.rawgit.com/ahmedhosna95/Elzero-Practice-07/b5ec32f4/images/bg.svg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    height:570px;
+    padding-left:20px;
+    padding-right:20px;
+    font-family:Pacifico;
+}
+.picture .container .sub-container{
+    height: 530px;
+    justify-content: flex-end;
+    align-items: center
+}
+.picture .container .sub-container .work-free{
+    text-align:right;
+    flex-basis: 100%;
+}
+.picture .container .sub-container .work-free h2{
+    font-size:40px;
+    font-style:italic;
+    font-weight:lighter;
+    line-height:65px;
+}
+.picture .container .sub-container .counters{
+    flex-basis: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.picture .container .sub-container .counters section{
+    flex-basis: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+.picture .container .sub-container .counters section h4{
+    flex-basis: 100%;
+    font-size:20px;
+    font-family:'Playfair Display';
+}
+.picture .container .sub-container .counters section h5{
+    font-size:40px;
+    font-style:italic;
+    font-weight:lighter;
+    line-height:65px;
+}
+/*End Picture*/
+
+                /*=== === === === === Start Media === === === === === === ==*/
+
+                /*=== === === === === --XXS Portrait phones and smaller === */
+
+@media (max-width: 479px){
+    .container{
+        flex-basis: calc(var(--xxs)*12);
+    }
+}
+
+                /*=== === === === === --XS Landscape phones and portrait tablets */
+
+@media (min-width: 480px) and (max-width: 767px){
+    .container{
+        flex-basis: calc(var(--xs)*12);
+    }
+    
+    /* Start header*/
+    header .container .sub-container{
+        justify-content: space-evenly;
+    }
+    header .container .sub-container main{
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        order: 1;
+    }
+    header .container .sub-container nav{
+        margin-bottom: 10px;
+        order: 2;
+    }
+    header .container .sub-container .search{
+        order: 3;
+    }
+    /* End header*/
+    
+    .picture .container .sub-container .work-free h2{
+        font-size:22px;
+    }
+    .picture .container .sub-container .counters{
+        flex-basis: 35%;
+    }
+    .picture .container .sub-container .counters section{
+        margin-bottom: 10px;
+    }
+}
+
+                /*=== === === === === --S Portrait tablets and small desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container{
+        flex-basis: calc(var(--s)*12);
+    }
+    .picture .container .sub-container .work-free h2{
+        font-size:32px;
+    }
+    .picture .container .sub-container .counters{
+        flex-basis: 65%;
+        justify-content: space-evenly;
+    }
+    .picture .container .sub-container .counters section{
+        flex-basis: 37%;
+        margin-bottom: 10px;
+    }
+}
+
+                /*=== === === === === --M Landscape tablets and medium desktops */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container{
+        flex-basis: calc(var(--m)*12);
+    }
+    .picture .container .sub-container .counters{
+        flex-basis: 65%;
+    }
+}
+
+                /*=== === === === === --L Large desktops and laptops === ===*/
+
+                /*=== === === === ===  Defult === === === === === === === ==*/
+
+@media (min-width: 1200px) {
+    .container{
+        flex-basis: calc(var(--l)*12);
+    }
+}
+
+                /*=== === === === === End Media === === === === === === === */

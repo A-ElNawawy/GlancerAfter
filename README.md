@@ -1,2 +1,2 @@
-# GlancerAfter
-PSD to HTML Conversion-3 v1.2==> Elzero_Practice_07
+# Glancer
+PSD to HTML conversion-3 v1.1==> Elzero_Practice_07
